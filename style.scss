@@ -1,0 +1,45 @@
+@import 'variables';
+@import 'mixins';
+@import 'components';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: $font-primary;
+  background-color: $background-color;
+  color: $text-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.nav-toggle {
+  display: none;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.nav-toggle:checked + .hamburger + .nav-menu {
+  display: flex;
+}
+
+@media (min-width: $breakpoint-tablet) {
+  html { font-size: 17px; }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  html { font-size: 18px; }
+}
